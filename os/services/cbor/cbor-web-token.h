@@ -80,12 +80,10 @@ typedef struct cwt_struct
 
 typedef struct dtls_channel_struc
 {
-#if DTLS_PSK
+
   uint8_t id[32];
   uint8_t key[32];
-#endif
-#if DTLS_ECC
-#endif	
+	
 }dtls_channel;
 
 /*typedef struct access_token_struc {
@@ -121,7 +119,7 @@ void integer2bytestring(uint32_t data, uint8_t num_bytes, uint8_t *dstr);
 void initiate_cbor_web_token(cbor_web_token *cbor_wtoken, int8_t num_claims);
 void encode_cbor_web_token(cbor_data *data, cbor_web_token *cbor_wtoken);
 void encode_struc_in_cnf(cbor_data *data, uint8_t cnf_key, uint8_t *method, uint32_t struct_len);
-//void decode_cbor_web_token(cbor_data *data, cbor_web_token *cbor_wtoken)
+void decode_cbor_web_token_no_dtls(cbor_data *data);
 void decode_cbor_web_token(cbor_data *data, uint8_t *claim, dtls_channel *new_dtls_channel);//, cbor_web_token *cbor_wtoken);
 
 void encode_cwt_directly(cbor_data *data, uint8_t claim_key, uint8_t *claim);

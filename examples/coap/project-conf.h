@@ -42,43 +42,35 @@
 //#define NUMWORDS 8
 //The Energest module is enabled by configuring ENERGEST_CONF_ON to 1
 #define ENERGEST_CONF_ON 0 
-// #define ENERGEST_CONF_CURRENT_TIME clock_time
-// #define ENERGEST_CONF_TIME_T clock_time_t
-// #define ENERGEST_CONF_SECOND CLOCK_SECOND
 
 
-// #define ENERGEST_CONF_PLATFORM_ADDITIONS ENERGEST_TYPE_COMPONENT1,ENERGEST_TYPE_COMPONENT2
-// #define ENERGEST_CONF_ADDITIONS ENERGEST_TYPE_COMPONENT3,ENERGEST_TYPE_COMPONENT4
-//#define ENERGEST_TIME_T 1
-//#define ENERGEST_SECOND 1
 /* Enable client-side support for COAP observe */
 #define COAP_OBSERVE_CLIENT            1
 //COAP CONFIGURATION
 
-/*
+
 #define UIP_CONF_BUFFER_SIZE 1280
 #define COAP_MAX_CHUNK_SIZE 256
 #define DTLS_MAX_BUF 256
 #define COAP_MAX_OPEN_TRANSACTIONS 4
 #define COAP_MAX_OBSERVER 3
-*/
+
 #define LOG_CONF_LEVEL_COAP LOG_LEVEL_DBG
 #define LOG_LEVEL_APP LOG_LEVEL_DBG
 #define LPM_CONF_MAX_PM 1
 
-//#define COAP_DTLS_PSK_DEFAULT_IDENTITY "Client_identity"
-//#define COAP_DTLS_PSK_DEFAULT_KEY "secretPSK"
+#define COAP_DTLS_PSK_DEFAULT_IDENTITY "Client_identity"
+#define COAP_DTLS_PSK_DEFAULT_KEY "secretPSK"
 
 
-//#define  WITH_DTLS 0
-//#define  DTLS_ECC 0
-//#define  DTLS_PSK 0
+#define  WITH_DTLS 1
+//#define  DTLS_ECC 1
+#define  DTLS_PSK 1
+
 #define  ACE_INFO 0
 #define  DISABLE_PRINTF   0
 #define  DISABLE_PRINTF_INSIDE  0
 #define  DISABLE_PRINTF_CBOR   0
-//#define DTLS_ECC 0
-//#define DTLS_PSK 1
 
-//#define ACE_INFO 0
+
 #endif /* PROJECT_CONF_H_ */

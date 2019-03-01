@@ -10,6 +10,7 @@
 #define LOG_LEVEL LOG_LEVEL_INFO
 
 #define  DISABLE_PRINTF_CBOR   0
+
 int8_t add_generic_claim(cbor_web_token *cbor_wtoken, uint8_t *claim,
 						enum cbor_encoded_claim_key claim_key, uint8_t len) {
 
